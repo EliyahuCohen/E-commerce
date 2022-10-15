@@ -1,0 +1,46 @@
+to create the client in sanity we already know and 
+also to create the token and put it inside of the required object 
+as well to the .env file to store our secret information about the project such as project id and the access token
+
+--------------------
+NEW THINGS  
+ in order to get information from a server / API / any resource we will have to use a function provided by the 
+ Next.js and the name inside
+ getServerSideProps 
+ this function helps us get async informtion from resources without any loading ti,e witch is 
+ CRAZY!!!
+
+ and the syntax gose like this 
+
+ export async function getServerSideProps(){
+    return {
+        props:{
+            and this will be passed to the page as props 
+        }
+    }
+ }
+
+ and also we can do the arrow function cersion of this 
+
+
+
+ The HEAD component comming form next js is a special component that is exacly like in plain html is just giving us some meta data to out page
+
+ VERY IMPORTENT 
+  in the file _app.js is the file of the whole app and now when we want to wrap the app or decide what the layout of the website will look like we can use the _app component and we can create a layout component that determain the structure of the app and wrap the Default Component that is already inside of the _app file with the Layout Component 
+
+  but the importent part is that we want to put the content of the website / app in the layout so how do we get it ? so its simple like in react context we get the children witch represent the whole app so we could get in the layout compontn the {children} and push the object children where ever we want to show the app 
+
+  for me its kind of a HOC in react but i might be wrong about this one
+
+
+
+  //in order to get something that already you know that it exists we need to use the getStaticProps that can get access to the params and fetch the specific product with the coresponding slug as we should have it could be an id as well
+
+
+  //net to use the GetStaticPaths
+//because Next.js is making all of the pages before hands so he needs to know about all of the possible paths he can get run into so we need to get all of the slug.cuurent witch means the acutual path and make it an array and return it and also a fallback:"blocking"
+
+
+///////////////////////
+in Next.js we dont need to create another folder for our backenfd node server we could just go to the api folder inside of pages and do it there
